@@ -10,7 +10,7 @@ class SMR(nn.Module):
         self.max_pooling = nn.MaxPool2d(self.input_channel, stride=1)
         self.map3 = self.compare_sh()
 ###############
-    def forward(self, shn, shk, n):
+    def forward(self, x, shn, shk, n):
         x = self.f(x)   # x==>(64*64*256)
         shk2 = self.compare_sh(shn, shk, n)  
         x1 = x*shk2  # 
