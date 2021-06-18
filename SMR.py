@@ -48,5 +48,5 @@ class SMR(nn.Module):
                         shk[i][j]=shk[i][j]-map3[i][j]
                     else:
                         shk[i][j]=0
-        shk2 = torch.from_numpy(shk) # 
-        return shk2
+        shk = torch.from_numpy(shk) # 
+        return shk
